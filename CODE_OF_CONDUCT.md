@@ -1,0 +1,1 @@
+Правила поведения в проекте регулируются основными правилами для всех проектов Snowball Developers Group, доступными по следующей ссылке: https://github.com/snowball-dev-group/snowball-bot-translation/blob/master/Languages/Russian/CODE_OF_CONDUCT.md
