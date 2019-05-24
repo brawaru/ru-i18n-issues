@@ -1,0 +1,464 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans&subset=cyrillic');
+@import url('https://cdn.rawgit.com/tonsky/FiraCode/1.205/distr/fira_code.css');
+
+:root {
+    --code-font: "Fira Code", monospace;
+    --body-font: "Noto Sans", serif;
+}
+
+ol {
+    margin: 0;
+    padding: 0
+}
+
+body {
+    font-family: var(--body-font);
+}
+
+/* HEADERS */
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    font-style: normal;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+h2 {
+    font-size: 1.8em;
+}
+
+h3 {
+    font-size: 1.6em;
+}
+
+h4, summary {
+    font-size: 1.4em;
+}
+
+h5 {
+    font-size: 1.2em;
+}
+
+h6 {
+    font-size: 1.1em;
+    opacity: .8;
+}
+
+/* CONTENT */
+
+.content {
+    margin: 0 auto;
+    max-width: 800px;
+    padding-top: 25px;
+    padding-bottom: 70px;
+    font-size: 1em;
+    font-style: normal;
+    font-weight: 400;
+    color: rgba(0,0,0,.8);
+    transition: all 0.3s, background 0ms, color 0ms;
+    word-wrap: break-word;
+}
+
+/* FIX CONTENT PADDING ON SMALL SCREENS */
+
+@media screen and (max-width: 835px) {
+    .content {
+        padding: 15px;
+        padding-bottom: 30px;
+    }
+}
+
+a, a:visited {
+    text-decoration: none;
+}
+
+a:not(.nolinkborder) {
+    color: #3969da;
+    border-bottom: 1px dotted #3969da;
+}
+
+a:not(.nolinkborder)[href^="http://"]:visited, a:not(.nolinkborder)[href^="https://"]:visited {
+    color: #324e90;
+    border-bottom: 1px dotted #324e90;
+}
+
+.author {
+    display: inline-flex;
+}
+
+.author .pfp {
+    width: 32px;
+    height: 32px;
+    display: inline-block;
+    background-position: center;
+    background-size: 100%;
+    border-radius: 100%;
+}
+
+.author .name {
+    padding: 5px;
+}
+
+/* BLOCKS */
+
+.content div.warning,
+.content div.info {
+    display: block;
+    padding: 10px;
+    padding-right: 20px;
+    border-radius: 3px;
+}
+
+.content div.warning {
+    background: rgba(255, 0, 0, 0.15);
+    border: 1px solid rgba(255, 0, 0, 0.30);
+    /* ICON */
+    background-image: url('https://emojipedia-us.s3.amazonaws.com/thumbs/120/twitter/103/warning-sign_26a0.png');
+    background-repeat: no-repeat;
+    background-position: 99.5% 2%;
+    background-size: 5%;
+}
+
+.content div.warning div.title {
+    display: block;
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: -10px;
+}
+
+.content div.warning a {
+    color: white !important;
+    border-bottom: 1px dotted white !important;
+}
+
+.content div.warning p {
+    margin-bottom: 10px;
+}
+
+.content div.info {
+    background: rgba(21, 152, 255, 0.2);
+    border: 1px solid rgba(21, 152, 255, .4);
+    /* ICON */
+    background-image: url('https://emojipedia-us.s3.amazonaws.com/thumbs/120/twitter/103/information-source_2139.png');
+    background-repeat: no-repeat;
+    background-position: 99.5% 2%;
+    background-size: 5%;
+}
+
+.content div.info div.title {
+    display: block;
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: -10px;
+}
+
+.content div.info a {
+    color: white !important;
+    border-bottom: 1px dotted white !important;
+}
+
+.content div.warning p {
+    margin-bottom: 10px;
+}
+
+.content figcaption {
+    display: block;
+    text-align: center;
+    font-size: 15px;
+    color: #79828B;
+    margin-top: 6px;
+}
+
+/* IMAGES */
+
+.content img {
+    display: block;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+}
+
+/* CODE */
+
+.content code,
+.content kbd {
+    font-family: var(--code-font);
+    font-size: 16px;
+    padding: 1px 4px;
+    line-height: 18px;
+    vertical-align: middle;
+}
+
+.content pre code {
+    display: block;
+    overflow: auto;
+    padding: 10px;
+}
+
+.content code {
+    background-color: rgba(0, 0, 0, .1);
+    border-radius: 2px;
+}
+
+.content kbd {
+    text-align: right;
+    display: inline-block;
+    color: #444d56;
+    background-color: #fafbfc;
+    border: solid 1px #c3c3c3;
+    border-bottom-color: #a2a2a2;
+    border-radius: 3px;
+    box-shadow: inset 0 -1px 2px 2px rgba(202, 202, 202, 0.3);
+}
+
+.content code.hljs {
+    padding: 10px;
+    display: block;
+}
+
+/* ANCHORS */
+
+.content a.header-anchor {
+    display: inline-flex;
+    opacity: 0;
+    transition: all 1s;
+    user-select: none !important;
+    float: right;
+}
+
+h1:hover > a.header-anchor,
+h2:hover > a.header-anchor,
+h3:hover > a.header-anchor,
+h4:hover > a.header-anchor {
+    opacity: 1;
+}
+
+.content h5 a.header-anchor,
+.content h6 a.header-anchor {
+    display: none;
+}
+
+.content a.header-anchor:focus {
+    opacity: 1;
+}
+
+/* QUOTES */
+
+.content blockquote {
+    display: block;
+    background-color: rgba(173, 173, 173, 0.20);
+    border: 1px solid rgba(0, 0, 0, .1);
+    border-radius: 2px;
+    margin: 0;
+    margin-top: 1px;
+    margin-bottom: 1px;
+    overflow: hidden;
+    border: 1px solid rgba(0, 0, 0, .1);
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    border-radius: 2px;
+}
+
+html[lang="ru"] blockquote::before {
+    content: "»";
+    font-size: 80px;
+    margin-right: -5px;
+    margin-top: -20px;
+    vertical-align: middle;
+}
+
+.content blockquote::before {
+    content: "”";
+    font-size: 11vw;
+    opacity: 0.5;
+    display: block;
+    float: right;
+    clear: both;
+    height: 0;
+    margin-top: -3%;
+    margin-right: -10px;
+    font-family: sans-serif;
+}
+
+.content blockquote p {
+    padding-right: 40px;
+}
+
+/* VULTR */
+
+img#vultr {
+    width: 100px;
+    transition: 1s all;
+}
+
+/* SCREENFIXES */
+
+@media screen and (min-width: 1070px) {
+    /* LOW IN WIDTH (NON-MOBILE) */
+
+    img#vultr {
+        position: fixed;
+        filter: grayscale(100);
+        opacity: .5;
+        bottom: 15px;
+        right: 15px;
+    }
+
+    img#vultr:hover {
+        opacity: 1;
+        filter: grayscale(0);
+    }
+}
+
+@media screen and (max-device-width: 450px) {
+    /* LOW IN WIDTH (MOBILE!) */
+    img#vultr {
+        width: 30%;
+        transition: 1s all;
+        padding-top: 20px;
+        filter: none;
+    }
+
+    table {
+        font-size: 4vw;
+    }
+}
+
+@media screen and (max-width: 1069px) and (min-device-width: 450px) {
+    /* LOW IN WIDTH */
+    img#vultr {
+        width: 200px;
+        transition: 1s all;
+        padding-top: 20px;
+    }
+}
+
+/* SPOILERS */
+
+.content details {
+    /* SPOILER ITSELF */
+    transition: all .3s;
+    transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
+    border: 1px solid rgba(0, 0, 0, .1);
+    background-color: rgba(0, 0, 0, .05);
+    width: 100%;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.content details[open] {
+    /* OPEN STATE */
+    background-color: rgba(0, 0, 0, 0.01);
+}
+
+.content details summary {
+    /* TITLE BLOCK */
+    display: block;
+    pointer-events: painted;
+    user-select: none !important;
+    cursor: pointer;
+    font-size: larger;
+    padding: 10px;
+}
+
+.content > details,
+.content > details > summary {
+    outline: none;
+}
+
+.content details[open] summary {
+    /* TITLE BLOCK IN OPEN STATE */
+    color: rgba(0,0,0,.7);
+}
+
+.content details > * {
+    /* INNER CONTENT */
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.content details .header-anchor {
+    /* DISABLE ANCHORS IN SPOILERS */
+    display: none;
+}
+
+.content details[open] summary ~ * {
+    /* ANIMATION */
+    animation: details-open .5s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+    transition: all .5s;
+    transform: scale(1);
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+@keyframes details-open {
+    from { transform: scale(.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+/* LINES */
+
+hr {
+    display: block;
+    height: 2px;
+    border: none;
+    background-color: rgba(128, 128, 128, .3);
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+/* TABLES */
+
+.content table {
+    display: block;
+    width: 100%;
+    overflow: auto;
+    border-collapse: collapse;
+}
+
+.content table td,
+.content table th {
+    padding: 4px;
+    border: 1px solid rgb(183, 183, 183);
+    vertical-align: top;
+    white-space: nowrap;
+    min-width: 230px;
+}
+
+.content table thead {
+    background-color: #D8D8D8;
+}
+
+.content table thead tr th {
+    border: 1px solid gray;
+}
+
+.content table tbody tr:nth-child(odd) {
+    background-color: whitesmoke;
+}
+
+.content table::-webkit-scrollbar-track {
+    background-color: #f5f5f5;
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border: none;
+}
+
+.content table::-webkit-scrollbar {
+    height: 1vh;
+    width: 0;
+    -webkit-appearance: slider-vertical;
+    background-color: #f5f5f500;
+    border: none;
+}
+
+.content table::-webkit-scrollbar-thumb {
+    border-radius: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    border: none;
+}
