@@ -130,8 +130,8 @@ a:not(.nolinkborder)[href^="http://"]:visited, a:not(.nolinkborder)[href^="https
 }
 
 .content div.warning a {
-    color: white !important;
-    border-bottom: 1px dotted white !important;
+    color: #282828 !important;
+    border-bottom: 1px dotted #282828 !important;
 }
 
 .content div.warning p {
