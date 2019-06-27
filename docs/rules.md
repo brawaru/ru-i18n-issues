@@ -54,13 +54,12 @@ meta:
 </script>
 
 <style>
-  button.butt-example { max-width: 140px; }
+  button.butt-example { max-width: 150px; }
 
   button.discord-button {
     color: #fff;
-    background-color: #7289da;
+    background-color: #2c48af;
     cursor: pointer;
-    -webkit-transition: background-color .17s ease,color .17s ease;
     transition: background-color .17s ease,color .17s ease;
     border: none;
     border-radius: 3px;
@@ -73,9 +72,9 @@ meta:
     height: 32px;
   }
 
-  button.discord-button:hover { background-color: #677bc4; }
+  button.discord-button:hover { background-color: #384e9c; }
 
-  button.discord-button:active { background-color: #5b6eae; }
+  button.discord-button:active { background-color: #243c8e; }
 </style>
 
 ## Общие соглашения
