@@ -57,10 +57,6 @@ a.main-content-lnk:active {
 	left: 0;
 }
 
-li {
-	margin-block: 10px;
-}
-
 .author .avatar {
 	float: left;
 	width: 32px;
@@ -104,6 +100,10 @@ footer {
 .content-centered {
 	max-width: 800px;
 	margin: 0 auto;
+}
+
+article ul li {
+	margin-block: 10px;
 }
 
 article div.note {
