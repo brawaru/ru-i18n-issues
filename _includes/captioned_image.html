@@ -1,0 +1,4 @@
+<figure>
+	<img src="{{ include.src }}" alt="{{ include.alt }}">
+	<figcaption>{{ include.caption | markdownify | remove: '<p>' | remove: '</p>' }}</figcaption>
+</figure>

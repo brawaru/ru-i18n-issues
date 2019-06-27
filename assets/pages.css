@@ -1,0 +1,590 @@
+@import url('https://fonts.googleapis.com/css?family=Exo+2:400,400i|Ubuntu+Mono&display=swap&subset=cyrillic');
+/* @import url('https://cdn.rawgit.com/tonsky/FiraCode/1.205/distr/fira_code.css'); */
+
+/* IBM Plex Sans is good */
+
+:root {
+	--code-font: "Ubuntu Mono", monospace;
+	--body-font: "Exo 2", sans-serif, 'Apple Color Emoji', Twemoji, Noto Sans Emoji;
+}
+
+ol {
+	margin: 0;
+	padding: 0
+}
+
+body {
+	font-family: var(--body-font);
+}
+
+/* HEADERS */
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 700;
+	font-style: normal;
+}
+
+article h1 {
+	font-size: 2em;
+}
+
+/* h2 {
+	font-size: 1.8em;
+}
+
+h3 {
+	font-size: 1.6em;
+}
+
+h4, summary {
+	font-size: 1.4em;
+}
+
+h5 {
+	font-size: 1.2em;
+}
+
+h6 {
+	font-size: 1.1em;
+	opacity: .8;
+} */
+
+/* CONTENT */
+
+body {
+	margin: 0 auto;
+	padding: 0;
+	font-size: 1.1em;
+	transition: all 0.3s, background 0ms, color 0ms;
+	word-wrap: break-word;
+}
+
+/* FIX CONTENT PADDING ON SMALL SCREENS */
+
+@media screen and (max-width: 835px) {
+	article.main-content {
+		padding: 15px;
+		padding-bottom: 30px;
+	}
+}
+
+a, a:visited {
+	text-decoration: none;
+}
+
+a:not(.nolinkborder) {
+	color: #3969da;
+	border-bottom: 1px dotted #3969da;
+}
+
+a:not(.nolinkborder)[href^="http://"]:visited, a:not(.nolinkborder)[href^="https://"]:visited {
+	color: #324e90;
+	border-bottom: 1px dotted #324e90;
+}
+
+a.main-content-lnk {
+	left: -99999px;
+	position: absolute;
+	pointer-events: none;
+	padding: 5px;
+	background: #3969da;
+	color: white;
+	z-index: 5;
+}
+
+a.main-content-lnk:focus-within,
+a.main-content-lnk:active {
+	left: 0;
+}
+
+.author .avatar {
+	float: left;
+	width: 32px;
+	margin-top: 2px;
+}
+
+.author .avatar img {
+	width: 32px;
+	height: 32px;
+	border-radius: 100%;
+}
+
+.author .info {
+	float: right;
+	width: calc(100% - 40px);
+}
+
+.author .info .name {
+	font-weight: bold;
+}
+
+.author .info .role {
+	font-style: italic;
+}
+
+.clearfix::before,
+.clearfix::after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+footer {
+	margin-top: 50px !important;
+	margin-bottom: 20px !important;
+	border: 1px solid #d8d8d8;
+	border-radius: 5px;
+}
+
+/* BLOCKS */
+
+.content-centered {
+	max-width: 800px;
+	margin: 0 auto;
+}
+
+nav.menu {
+	/* position: fixed;
+	width: 100%;
+	top: 0;
+	margin-top: 0; */
+	background-color: rgba(255, 255, 255, 0.95);
+	box-shadow: 0 0px 10px 0px #eaeaead6;	
+}
+
+/* nav.menu div {
+	backdrop-filter: blur(3px);
+}
+
+article.main-content {
+	padding-top: 61px;
+} */
+
+article div.note {
+	display: block;
+	padding: 10px;
+	padding-right: 20px;
+	border-radius: 3px;
+	margin-block: 15px;
+}
+
+article div.note p:first-child {
+	margin-block-start: 0;
+}
+
+article div.note p:last-child {
+	margin-block-end: 0;
+}
+
+article div.note div.title {
+	display: block;
+	font-weight: bold;
+	font-size: 20px;
+	margin-bottom: 5px;
+}
+
+article div.note-warn,
+article div.note-warning {
+	background: rgba(255, 0, 0, 0.15);
+	border: 1px solid rgba(255, 0, 0, 0.30);
+	/* ICON */
+	/* background-image: url('https://emojipedia-us.s3.amazonaws.com/thumbs/120/twitter/103/warning-sign_26a0.png');
+	background-repeat: no-repeat;
+	background-position: 99.5% 2%;
+	background-size: 5%;*/
+}
+
+article div.note a {
+	color: black !important;
+	border-bottom: 1px dotted black !important;
+}
+
+article div.note-info,
+article div.note-information {
+	background: rgba(21, 152, 255, 0.2);
+	border: 1px solid rgba(21, 152, 255, .4);
+	/* ICON */
+	/* background-image: url('https://emojipedia-us.s3.amazonaws.com/thumbs/120/twitter/103/information-source_2139.png');
+	background-repeat: no-repeat;
+	background-position: 99.5% 2%;
+	background-size: 5%; */
+}
+
+article figcaption {
+	display: block;
+	text-align: center;
+	font-size: 15px;
+	color: #79828B;
+	margin-top: 6px;
+}
+
+/* IMAGES */
+
+article img:not(.emoji) {
+	display: block;
+	max-width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 5px;
+}
+
+/* CODE */
+
+article code,
+article kbd {
+	font-family: var(--code-font);
+	padding: 1px 4px;
+	/* line-height: 18px;
+	vertical-align: middle; */
+}
+
+article pre code {
+	display: block;
+	overflow: auto;
+	padding: 10px;
+}
+
+article code {
+    background-color: rgba(0, 0, 0, 0.06);
+    border-radius: 4px;
+}
+
+article kbd {
+	text-align: right;
+	display: inline-block;
+	color: #444d56;
+	background-color: #fafbfc;
+	border: solid 1px #c3c3c3;
+	border-bottom-color: #a2a2a2;
+	border-radius: 3px;
+	box-shadow: inset 0 -1px 2px 2px rgba(202, 202, 202, 0.3);
+}
+
+article code.hljs {
+	padding: 10px;
+	display: block;
+}
+
+/* ANCHORS */
+
+article a.header-anchor {
+	display: inline-flex;
+	opacity: 0;
+	transition: all 1s;
+	user-select: none !important;
+	float: right;
+}
+
+h1:hover > a.header-anchor,
+h2:hover > a.header-anchor,
+h3:hover > a.header-anchor,
+h4:hover > a.header-anchor {
+	opacity: 1;
+}
+
+article h5 a.header-anchor,
+article h6 a.header-anchor {
+	display: none;
+}
+
+article a.header-anchor:focus {
+	opacity: 1;
+}
+
+/* QUOTES */
+
+article blockquote {
+	display: block;
+	background-color: rgba(173, 173, 173, 0.20);
+	border: 1px solid rgba(0, 0, 0, .1);
+	border-radius: 2px;
+	margin: 0;
+	margin-top: 1px;
+	margin-bottom: 10px;
+	overflow: hidden;
+	border: 1px solid rgba(0, 0, 0, .1);
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	border-radius: 2px;
+}
+
+article blockquote.linked {
+	margin-bottom: 0px;
+	border-bottom: 1px dashed rgba(0,0,0,.06);
+	border-radius: 2px 2px 0 0;
+}
+
+html[lang="ru"] blockquote::before {
+	content: "»";
+	font-size: 80px;
+	margin-right: -5px;
+	margin-top: -27px;
+	vertical-align: middle;
+}
+
+article blockquote::before {
+	content: "”";
+	opacity: 0.5;
+	display: block;
+	float: right;
+	clear: both;
+	height: 0;
+	margin-top: -2%;
+	margin-right: 0;
+	font-family: sans-serif;
+	font-size: 120px;
+}
+
+article blockquote p {
+	padding-right: 40px;
+}
+
+article div.author.quote {
+	background: rgba(173, 173, 173, 0.20);
+	/* padding-bottom: 10px;
+	padding-top: 10px; */
+	padding: 10px 10px 5px 5px;
+	margin-bottom: 10px;
+	border-radius: 0px 0px 2px 2px;
+	border: 1px solid rgba(0, 0, 0, .1);
+	border-top: 0;
+}
+
+article div.author.quote .info.no-role {
+	padding-top: 6px;
+}
+
+/* VULTR */
+
+img#vultr {
+	width: 100px;
+	transition: 1s all;
+}
+
+/* SCREENFIXES */
+
+@media screen and (max-device-width: 600px) {
+	nav.menu div.logo {
+		display: block;
+		float: unset !important;
+		text-align: center;
+	}
+
+	nav.menu ul {
+		float: none !important;
+		padding: 0;
+		margin: 0 auto;
+		max-width: fit-content;
+	}
+
+	table thead {
+		display: none;
+	}
+
+	table tr {
+		display: block;
+		margin-bottom: .625em;
+	}
+
+	table td, table th {
+		white-space: unset !important;
+	}
+
+	table td {
+		display: block;
+		font-size: .8em;
+		text-align: right !important;
+	}
+
+	table td[data-empty]::after {
+		content: "-";
+		opacity: .70;
+		float: right;
+		font-weight: bold;
+	}
+
+	table td:not(:last-child) {
+		border-bottom: none;
+	}
+
+	table td::before {
+		content: attr(data-column);
+		float: left;
+		font-weight: bold;
+	}
+}
+
+/* SPOILERS */
+
+article details {
+	/* SPOILER ITSELF */
+	transition: all .3s;
+	transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
+	border: 1px solid rgba(0, 0, 0, .1);
+	background-color: rgba(0, 0, 0, .05);
+	width: 100%;
+	margin-bottom: 10px;
+	margin-top: 10px;
+}
+
+article details[open] {
+	/* OPEN STATE */
+	background-color: rgba(0, 0, 0, 0.01);
+}
+
+article details summary {
+	/* TITLE BLOCK */
+	display: block;
+	pointer-events: painted;
+	user-select: none !important;
+	cursor: pointer;
+	font-size: larger;
+	padding: 10px;
+}
+
+article > details,
+article > details > summary {
+	outline: none;
+}
+
+article details[open] summary {
+	/* TITLE BLOCK IN OPEN STATE */
+	color: rgba(0,0,0,.7);
+}
+
+article details > * {
+	/* INNER CONTENT */
+	margin-left: 30px;
+	margin-right: 30px;
+}
+
+article details .header-anchor {
+	/* DISABLE ANCHORS IN SPOILERS */
+	display: none;
+}
+
+article details[open] summary ~ * {
+	/* ANIMATION */
+	animation: details-open .5s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+	transition: all .5s;
+	transform: scale(1);
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+@keyframes details-open {
+	from { transform: scale(.8); opacity: 0; }
+	to { transform: scale(1); opacity: 1; }
+}
+
+/* LINES */
+
+hr {
+	display: block;
+	height: 2px;
+	border: none;
+	background-color: rgba(128, 128, 128, .3);
+	margin-bottom: 20px;
+	margin-top: 20px;
+}
+
+/* TABLES */
+
+article table {
+	width: 100%;
+	overflow: auto;
+	border-collapse: collapse;
+}
+
+article table td,
+article table th {
+	padding: 4px;
+	border: 1px solid rgb(183, 183, 183);
+	vertical-align: top;
+	white-space: nowrap;
+	min-width: 230px;
+}
+
+article table thead {
+	background-color: #D8D8D8;
+}
+
+article table thead tr th {
+	border: 1px solid gray;
+}
+
+article table tbody tr:nth-child(odd) {
+	background-color: whitesmoke;
+}
+
+article table::-webkit-scrollbar-track {
+	background-color: #f5f5f5;
+	box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+	border: none;
+}
+
+article table::-webkit-scrollbar {
+	height: 1vh;
+	width: 0;
+	-webkit-appearance: slider-vertical;
+	background-color: #f5f5f500;
+	border: none;
+}
+
+article table::-webkit-scrollbar-thumb {
+	border-radius: 0;
+	background-color: rgba(0, 0, 0, 0.2);
+	border: none;
+}
+
+.gray-block {
+	display: block;
+	background: rgba(250, 250, 250);
+	padding: 5px;
+}
+
+nav.menu div.logo {
+	font-style: italic;
+	font-weight: bold;
+	font-size: 1.3em;
+	padding: 8px;
+	float: left;
+	color: black;
+}
+
+nav.menu ul {
+	list-style: none;
+	float: right;
+	margin-block: 0 0;
+}
+
+nav.menu ul li {
+	display: inline-block;
+	transition: background .25s;
+}
+
+nav.menu ul li a {
+	display: inline-block;
+	padding: 15px;
+}
+
+nav.menu ul li a:focus {
+	background: rgba(0, 0, 0, .05);
+}
+
+nav.menu ul a.current li {
+	background: rgba(0, 0, 0, .07);
+}
+
+nav.menu ul a,
+nav.menu ul a:visited {
+	color: #185998 !important;
+	border-bottom: none;
+}
+
+nav.menu ul a.current,
+nav.menu ul a.current:visited {
+	color: black !important;
+}

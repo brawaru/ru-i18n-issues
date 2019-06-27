@@ -1,0 +1,40 @@
+{% if page.author.avatar %}
+	{% assign avatar_url = page.author.avatar %}
+{% else %}
+	{% assign avatar_url = '/assets/no_avatar.jpg' | absolute_url %}
+{% endif %}
+
+{% assign edit_url = site.github.repository_url | append: '/edit/gh-pages/' | append: page.path %}
+
+<!DOCTYPE html>
+<html lang="ru" xml:lang="{{ page.language }}">
+	{% include head.html %}
+
+	<body>
+		<a href="#content" class="main-content-lnk">К содержимому</a>
+		{% include menu.html edit_url=edit_url %}
+		<article id="content" class="main-content content-centered">
+			{% unless page.hide_title %}
+			<h1>{{ page.title }}</h1>
+			{% endunless %}
+			{% include anchor_headings.html html=content anchorClass="header-anchor" anchorBody="#" %}
+		</article>
+		{% if page.author.name %}
+		<footer class="author gray-block content-centered clearfix">
+			<div class="avatar">
+				<img src="{{ avatar_url }}" alt="Аватарка">
+			</div>
+			<div class="info">
+				<div class="name">{{ page.author.name }}</div>
+				{% if page.author.role %}
+				<div class="role">{{ page.author.role }}</div>
+				{% endif %}
+				<a href="{{ edit_url }}">Дополнить эту страницу</a> · <a href="#">Вверх</a>
+			</div>
+		</footer>
+		{% endif %}
+		{% for script in page.meta.scripts %}
+		<script src="{{ '/assets/js/' | append: script | append: '.js' | absolute_url }}"></script>
+		{% endfor %}
+	</body>
+</html>

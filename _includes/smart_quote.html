@@ -1,0 +1,20 @@
+{% if include.author_avatar %}
+  {% assign avatar_url = include.author_avatar | absolute_url %}
+{% endif %}
+
+<blockquote class="linked"><p>{{ include.content }}</p></blockquote>
+{% if include.author %}
+<div class="author quote clearfix">
+  {% if avatar_url %}
+  <div class="avatar">
+    <img src="{{ avatar_url }}" alt="Аватарка">
+  </div>
+  {% endif %}
+  <div class="info{% unless include.author_role %} no-role{% endunless %}">
+		<div class="name">{{ include.author }}</div>
+		{% if include.author_role %}
+		<div class="role">{{ include.author_role }}</div>
+		{% endif %}
+  </div>
+</div>
+{% endif %}

@@ -1,0 +1,47 @@
+title: "Discord по-русски"
+
+defaults:
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: default
+      author:
+        name: "Саша Сорокин"
+        role: "Проверяющий команды по переводу Discord на русский язык"
+        avatar: "https://avatars2.githubusercontent.com/u/10401817?s=100&v=4"
+  - scope:
+      path: "docs/translation"
+      type: pages
+    values:
+      category: "волонтёрство"
+  - scope:
+      path: "docs/guides"
+      type: pages
+    values:
+      category: "руководства"
+
+plugins:
+  - jekyll-feed
+  - jekyll-redirect-from
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-mentions
+
+compress_images:
+  images_path: "{docs,assets}/**/*.{gif,png,jpg,jpeg,svg}"
+
+exclude_pages:
+  - 404.html
+  - sitemap.xml
+  - robots.txt
+  - index.md
+  - assets/css/style.scss
+  - redirects.json
+  - feed.xml
+
+hamburger_links:
+  - title: "О проекте"
+    url: about
+  - title: "Дополнить"
+    is_edit: Yes
