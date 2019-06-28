@@ -17,6 +17,7 @@
 - Инструкции по самостоятельному «датамайну» переводов:
   - [Сайт (кроме поддержки)](https://gist.github.com/Sasha-Sorokin/d647eb3d3354f6afbb5bff7fca0fc717)
   - [Клиент для компьютера](https://gist.github.com/Sasha-Sorokin/b826d9ae3f2704c4b8122a06570fd468)
+- [Наши руководства **в обновлённом формате**](https://sasha-sorokin.github.io/ru-i18n-issues/)
 - [Репозиторий «датамайна» обновлений Discord](https://github.com/DJScias/Discord-Datamining)
 
 ## Лицензия
