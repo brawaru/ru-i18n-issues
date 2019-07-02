@@ -486,3 +486,6 @@ SOFTWARE.
 - .editorconfig
 - 404.html
 - Gemfile*
+- _layouts/*
+- _includes/*
+- _data/*
