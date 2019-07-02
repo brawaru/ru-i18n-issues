@@ -248,13 +248,14 @@ article blockquote::before {
     display: block;
     font-size: 120px;
     position: absolute;
-    top: -20px;
+    top: -25px;
     right: 10px;
 }
 
 html[lang="ru"] blockquote::before {
     content: "»";
-    font-size: 80px;
+	font-size: 80px;
+	top: -30px;
 }
 
 article blockquote p {
