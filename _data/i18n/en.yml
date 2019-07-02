@@ -1,0 +1,19 @@
+title: "Discord in Russian"
+
+navigation:
+  about: "About"
+  contribute: "Edit"
+  skip_link: "Skip to content"
+
+quotation:
+  avatar: "Avatar"
+
+footer:
+  separator: "·"
+  edit_page: "Edit this page"
+  top: "Top"
+  copyright: "© All materials belong to their respective owners."
+
+_404:
+  title: "What a bummer!"
+  sub_text: "Seems there's no such page."

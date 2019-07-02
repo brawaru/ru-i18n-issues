@@ -1,4 +1,4 @@
-title: "Discord по-русски"
+language: "ru"
 
 defaults:
   - scope:
@@ -40,7 +40,7 @@ exclude_pages:
   - feed.xml
 
 hamburger_links:
-  - title: "О проекте"
+  - title: about
     url: about
-  - title: "Дополнить"
+  - title: contribute
     is_edit: Yes

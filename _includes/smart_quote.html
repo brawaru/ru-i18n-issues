@@ -2,12 +2,28 @@
   {% assign avatar_url = include.author_avatar | absolute_url %}
 {% endif %}
 
+{% if page.language %}
+{% assign locale_used = page.language %}
+{% elsif site.language %}
+{% assign locale_used = site.language %}
+{% else %}
+{% assign locale_used = "en" %}
+{% endif %}
+
+{% assign locale = site.data.i18n[locale_used] %}
+
+{% if include.author %}
+{% assign avatar_alt = include.author %}
+{% else %}
+{% assign avatar_alt = locale.quotation.avatar %}
+{% endif %}
+
 <blockquote class="linked"><p>{{ include.content }}</p></blockquote>
 {% if include.author %}
 <div class="author quote clearfix">
   {% if avatar_url %}
   <div class="avatar">
-    <img src="{{ avatar_url }}" alt="Аватарка">
+    <img src="{{ avatar_url }}" alt="{{ avatar_alt }}">
   </div>
   {% endif %}
   <div class="info{% unless include.author_role %} no-role{% endunless %}">

@@ -1,8 +1,18 @@
+{% if page.language %}
+{% assign locale_used = page.language %}
+{% elsif site.language %}
+{% assign locale_used = site.language %}
+{% else %}
+{% assign locale_used = "en" %}
+{% endif %}
+
+{% assign locale = site.data.i18n[locale_used] %}
+
 <nav class="menu clearfix">
-	<a href="{{ '/' | absolute_url }}"><div class="logo">{{ site.title }}</div></a>
+	<a href="{{ '/' | absolute_url }}"><div class="logo">{{ locale.title }}</div></a>
 	<ul>
 		{% for link in site.hamburger_links %}
-		<li><a href="{% if link.is_edit %}{{ include.edit_url }}{% else %}{{ link.url | absolute_url }}{% endif %}" {% if link.external %} rel="noreferrer" target="_blank" {% endif %} {% if page.url == link.url %} class="current" {% endif %}>{{ link.title }}</a></li>
+		<li><a href="{% if link.is_edit %}{{ include.edit_url }}{% else %}{{ link.url | absolute_url }}{% endif %}" {% if link.external %} rel="noreferrer" target="_blank" {% endif %} {% if page.url == link.url %} class="current" {% endif %}>{{ locale.navigation[link.title] }}</a></li>
 		{% endfor %}
 	</ul>
 </nav>

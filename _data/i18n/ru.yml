@@ -1,0 +1,19 @@
+title: "Discord по-русски"
+
+navigation:
+  about: "О проекте"
+  contribute: "Дополнить"
+  skip_link: "К содержимому"
+
+quotation:
+  avatar: "Аватарка"
+
+footer:
+  separator: "·"
+  edit_page: "Дополнить эту страницу"
+  top: "Вверх"
+  copyright: "© Все материалы пренадлежат их владельцам"
+
+_404:
+  title: "Какая досада!"
+  sub_text: "Похоже, такой страницы не существует."
