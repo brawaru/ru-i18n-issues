@@ -149,7 +149,7 @@ article div.note-information {
 article figcaption {
 	display: block;
 	text-align: center;
-	font-size: 15px;
+	font-size: 0.94em;
 	color: rgb(86, 86, 86);
 	margin-top: 6px;
 }
