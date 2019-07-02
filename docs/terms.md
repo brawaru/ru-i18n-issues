@@ -7,7 +7,7 @@ meta:
 ---
 
 {% capture auto_generated %}
-Вы можете дополнить список терминов, [отредактировав файл terms.csv](https://github.com/Sasha-Sorokin/ru-i18n-issues/edit/gh-pages/_data/terms.csv).
+Вы можете дополнить список терминов, [отредактировав файл `_data/terms.csv`](https://github.com/Sasha-Sorokin/ru-i18n-issues/edit/gh-pages/_data/terms.csv).
 {% endcapture %}
 
 {% include note.html type="information" title="Эта страница генерируется автоматически" content=auto_generated %}
