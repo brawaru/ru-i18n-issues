@@ -233,12 +233,8 @@ article blockquote {
 	border: 1px solid rgba(0, 0, 0, .1);
 	border-radius: 2px;
 	margin: 0;
-	margin-top: 1px;
-	margin-bottom: 10px;
-	overflow: hidden;
-	border: 1px solid rgba(0, 0, 0, .1);
 	padding: 0px 10px;
-	border-radius: 2px;
+	position: relative;
 }
 
 article blockquote.linked {
@@ -249,21 +245,17 @@ article blockquote.linked {
 
 article blockquote::before {
 	content: "”";
-	opacity: 0.5;
-	display: block;
-	float: right;
-	clear: both;
-	margin-top: -2%;
-	margin-right: 0;
-	font-family: sans-serif;
-	font-size: 120px;
+    opacity: 0.5;
+    display: block;
+    font-size: 120px;
+    position: absolute;
+    top: -20px;
+    right: 10px;
 }
 
 html[lang="ru"] blockquote::before {
-	content: "»";
-	font-size: 80px;
-	margin-right: -5px;
-	margin-top: -27px;
+    content: "»";
+    font-size: 80px;
 }
 
 article blockquote p {
