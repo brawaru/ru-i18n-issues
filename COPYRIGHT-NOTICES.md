@@ -5,8 +5,10 @@ description: "Мы используем материалы которые не �
 
 {{ page.description }} Весь материал используется исключительно в ознакомительных или обучающих целях.
 
-- [files/island.gif](/files/island.gif)
+- [files/island.gif](/files/island.gif),
+  [files/island.mp4](/files/island.mp4),
   - © 2016-2019 Discord Inc. — https://discordapp.com/
+  - Модифицированная версия от [Sasha-Sorokin](https://github.com/Sasha-Sorokin): mp4 версия
   - Источник: https://dribbble.com/shots/2569355-Floating-Island
 - [files/languages.gif](/files/languages.gif)
   - © 2016-2019 Discord Inc. — https://discordapp.com/
@@ -20,8 +22,12 @@ description: "Мы используем материалы которые не �
 - [files/crowdin_editor.jpg](/files/crowdin_editor.jpg),
   [files/panel_and_translations.jpg](/files/panel_and_translations.jpg),
   [files/translation_panel.jpg](/files/translation_panel.jpg),
+  [files/crowdin_editor.webp](/files/crowdin_editor.jpg),
+  [files/panel_and_translations.webp](/files/panel_and_translations.jpg),
+  [files/translation_panel.webp](/files/translation_panel.jpg),
   - © 2016-2019 OÜ Crowdin - https//crowdin.com/
   - Эти файлы — скриншоты программного обеспечения или сайта
+  - Модифицированные версии от [Sasha-Sorokin](https://github.com/Sasha_Sorokin): webp формат, сжатие
   - Источник: *сайт Crowdin*
 - [assets/js/bombs.js](/assets/js/bombs.js)
   - © 2010-2019 Philippe-Antoine Lehoux - https://twitter.com/plehoux
