@@ -36,8 +36,6 @@ exclude_pages:
   - 404.html
   - sitemap.xml
   - robots.txt
-  - index.md
-  - assets/css/style.scss
   - redirects.json
   - feed.xml
 

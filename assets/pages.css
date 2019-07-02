@@ -90,6 +90,7 @@ a.main-content-lnk:active {
 }
 
 footer {
+	margin-top: 60px !important;
 	margin-bottom: 10px !important;
 	border: 1px solid #d8d8d8;
 	border-radius: 5px;
@@ -299,6 +300,11 @@ article div.author.quote .info.no-role {
 		padding: 0;
 		margin: 0 auto;
 		max-width: max-content;
+	}
+
+	footer {
+		margin-top: 10px !important;
+		width: 95%;
 	}
 
 	table thead {
