@@ -22,6 +22,10 @@ defaults:
     values:
       category: "руководства"
 
+copyright:
+  license: "CC-BY 4.0"
+  additional_material: /COPYRIGHT-NOTICES
+
 plugins:
   - jekyll-feed
   - jekyll-redirect-from

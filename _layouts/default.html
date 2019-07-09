@@ -31,19 +31,25 @@
 			{% include anchor_headings.html html=content anchorClass="header-anchor" anchorBody="#" %}
 		</article>
 		{% if page.author.name %}
-		<footer class="author gray-block content-centered clearfix">
-			<div class="avatar">
-				<img src="{{ avatar_url }}" alt="{{ locale.quotation.avatar }}">
+		<footer class="content-centered clearfix">
+
+			{% assign copyright = site.copyright %}
+			<div class="copyright">
+				<div class="copyright-icon">©</div>
+				<div class="copyright-content">
+					{% if copyright.author %}
+					{% elsif copyright.license %}
+					{% assign license_replace = "{license}" %}
+					{{ locale.copyright | replace: license_replace, copyright.license }}
+					{% endif %}
+					<br>
+					{% if copyright.additional_material %}
+					<a href="{{ site.copyright.additional_material | relative_url }}">{{ locale.footer.copyright }}</a>
+					{% endif %}
+				</div>
 			</div>
-			<div class="info">
-				<div class="name">{{ page.author.name }}</div>
-				{% if page.author.role %}
-				<div class="role">{{ page.author.role }}</div>
-				{% endif %}
-				<a href="{{ edit_url }}">{{ locale.footer.edit_page }}</a> {{ locale.footer.separator }} <a href="#">{{ locale.footer.top }}</a>
-				<br><br>
-				<a href="{{ '/COPYRIGHT-NOTICES' | absolute_url }}">{{ locale.footer.copyright }}</a>
-			</div>
+
+			<a href="#" class="up-link" title="{{ locale.footer.up }}">⮵</a>
 		</footer>
 		{% endif %}
 		{% for script in page.meta.scripts %}
