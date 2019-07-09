@@ -29,14 +29,17 @@ a, a:visited {
 	text-decoration: none;
 }
 
-a:not(.nolinkborder) {
-	color: #3969da;
-	border-bottom: 1px dotted #3969da;
+a {
+	color: #0000FF;
+	border-bottom: 1px dotted;
 }
 
-a:not(.nolinkborder)[href^="http://"]:visited, a:not(.nolinkborder)[href^="https://"]:visited {
-	color: #324e90;
-	border-bottom: 1px dotted #324e90;
+@media not print {
+	/* External links coloring */
+	a[href^="http://"]:visited,
+	a[href^="https://"]:visited {
+		color: #900b90;
+	}
 }
 
 a.main-content-lnk {
