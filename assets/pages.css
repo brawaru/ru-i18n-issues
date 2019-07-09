@@ -57,12 +57,6 @@ a.main-content-lnk:active {
 	left: 0;
 }
 
-.author .avatar {
-	float: left;
-	width: 32px;
-	margin-top: 2px;
-}
-
 .author .avatar img {
 	width: 32px;
 	height: 32px;
@@ -278,7 +272,7 @@ article blockquote p {
 	padding-right: 40px;
 }
 
-article div.author.quote {
+article div.quote {
 	background: rgba(173, 173, 173, 0.20);
 	padding: 10px 10px 5px 5px;
 	margin-bottom: 10px;
@@ -287,8 +281,19 @@ article div.author.quote {
 	border-top: 0;
 }
 
-article div.author.quote .info.no-role {
-	padding-top: 6px;
+article div.quote div.author  {
+	display: table;
+}
+
+article div.quote div.author .avatar {
+	display: table-cell;
+	width: max-content;
+	vertical-align: middle;
+}
+
+article div.quote div.author .info {
+	display: table-cell;
+	padding-left: 10px;
 }
 
 @media screen and (max-width: 850px) {
