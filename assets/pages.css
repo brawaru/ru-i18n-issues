@@ -355,6 +355,12 @@ article div.quote div.author .info {
 		float: left;
 		font-weight: bold;
 	}
+
+	footer .up-link {
+		position: unset;
+		float: right;
+		font-size: 2em;
+	}
 }
 
 /* SPOILERS */
